@@ -1,0 +1,12 @@
+.aviator-container {
+    position: relative;
+    height: 500px;
+    width: 100%;
+    overflow: hidden; /* Prevent aviator from leaving this area */
+    border: 2px solid #000; /* Optional: Visual boundary for the container */
+  }
+  
+  img {
+    transition: transform 0.1s linear; /* Smooth transition for the aviator */
+  }
+  

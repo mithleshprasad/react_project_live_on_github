@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aviator Game</title>
+  <style>
+    body {
+      margin: 0;
+      overflow: hidden;
+    }
+    canvas {
+      background-color: #f0f0f0;
+      display: block;
+    }
+    .multiplier {
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      font-size: 24px;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="multiplier">Multiplier: <span id="multiplier-value">1.00</span>x</div>
+  <canvas id="aviatorCanvas"></canvas>
+
+  <script>
+    // Select canvas and set up context
+    const canvas = document.getElementById('aviatorCanvas');
+    const ctx = canvas.getContext('2d');
+
+    // Set canvas size to full window
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+
+    // Load aviator image
+    const aviatorImage = new Image();
+    aviatorImage.src = 'path-to-your-aviator-image.png'; // Replace with the actual image path
+
+    // Variables for aviator position and movement
+    let aviatorX = 0; // Start at the bottom-left corner
+    let aviatorY = canvas.height - 100; // Bottom of the canvas
+    let aviatorSpeedX = 2; // Horizontal speed
+    let aviatorSpeedY = -2; // Vertical speed
+    let multiplier = 1.00;
+    let gameRunning = true;
+
+    // Multiplier DOM element
+    const multiplierEl = document.getElementById('multiplier-value');
+
+    // Function to update multiplier value
+    function updateMultiplier() {
+      multiplier += 0.01; // Increment multiplier
+      multiplierEl.innerText = multiplier.toFixed(2);
+    }
+
+    // Function to draw the aviator image
+    function drawAviator() {
+      ctx.drawImage(aviatorImage, aviatorX, aviatorY, 60, 60); // Draw aviator with size 60x60
+    }
+
+    // Function to clear the canvas
+    function clearCanvas() {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+    }
+
+    // Function to update the canvas animation
+    function update() {
+      if (!gameRunning) return;
+
+      clearCanvas();       // Clear previous frame
+      drawAviator();       // Draw the aviator
+
+      // Move the aviator towards the top-right corner
+      aviatorX += aviatorSpeedX;
+      aviatorY += aviatorSpeedY;
+
+      // Stop when reaching the top-right corner
+      if (aviatorX > canvas.width || aviatorY < 0) {
+        gameRunning = false;
+      }
+
+      updateMultiplier(); // Update multiplier value
+
+      // Request next frame of animation
+      requestAnimationFrame(update);
+    }
+
+    // Start the game loop once the image is loaded
+    aviatorImage.onload = () => {
+      update();
+    };
+
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,30 @@
+
+
+.title {
+    font-size: 2.5rem;
+    color: #4a90e2; /* Blue color for the title */
+    margin-bottom: 20px;
+}
+
+input {
+    padding: 10px;
+    font-size: 1.2rem;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    margin-right: 10px;
+}
+
+.submit-btn {
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 5px;
+    background-color: #4caf50; /* Green color for buttons */
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.submit-btn:hover {
+    background-color: #45a049; /* Darker green on hover */
+}

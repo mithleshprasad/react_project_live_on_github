@@ -1,0 +1,103 @@
+body {
+  background-color: #e0f7fa; /* Light cyan background for the entire page */
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100vh;
+}
+
+.title {
+  font-size: 2.5rem;
+  color: #006064; /* Dark cyan for the title */
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.button-container {
+  display: flex;
+  flex-direction: column; /* Stack buttons vertically */
+  gap: 15px; /* Space between buttons */
+}
+
+.submit-btn {
+  display: inline-block;
+  padding: 15px 25px;
+  margin: 10px;
+  border: none;
+  border-radius: 10px; /* More rounded corners for buttons */
+  text-decoration: none;
+  color: white; /* Text color for the buttons */
+  font-size: 1.2rem;
+  transition: background-color 0.3s, transform 0.3s; /* Smooth transition for hover effects */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+}
+
+.submit-btn:hover {
+  transform: scale(1.05); /* Slightly increase the button size on hover */
+}
+
+/* Different button colors */
+.bg-color-game {
+  background-color: #ff4081 !important; /* Pink for Color Game */
+}
+
+.bg-scramble-game {
+  background-color: #3f51b5 !important; /* Indigo for Scramble Word Game */
+}
+
+.bg-quiz-game {
+  background-color: #4caf50 !important; /* Green for Quiz Game */
+}
+
+.bg-memory-game {
+  background-color: #ff9800; /* Orange for Memory Match */
+}
+
+.bg-scavenger-game {
+  background-color: #2196f3 !important; /* Blue for Scavenger Hunt */
+}
+
+/* Optional: Add focus styles for accessibility */
+.submit-btn:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(0, 121, 107, 0.5); /* Outline effect for focus */
+}
+
+
+/* src/styles.css */
+body {
+  margin: 0;
+  overflow: hidden;
+  background: #282c34;
+}
+
+.container {
+  text-align: center;
+  position: relative;
+}
+
+.button-container {
+  margin: 20px;
+}
+
+.submit-btn {
+  display: inline-block;
+  padding: 10px 20px;
+  border-radius: 5px;
+  color: white;
+  text-decoration: none;
+  margin: 5px;
+}
+
+.bg-color-game { background-color: #007bff; }
+.bg-scramble-game { background-color: #28a745; }
+.bg-quiz-game { background-color: #ffc107; }
+.bg-memory-game { background-color: #dc3545; }
+.bg-scavenger-game { background-color: #17a2b8; }
