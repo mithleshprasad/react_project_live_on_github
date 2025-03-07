@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/react_project_live_on_github/static/css/main.c85abbad.css",
+    "main.js": "/react_project_live_on_github/static/js/main.4a78185a.js",
+    "static/js/453.6d57a1bf.chunk.js": "/react_project_live_on_github/static/js/453.6d57a1bf.chunk.js",
+    "static/media/aviator.png": "/react_project_live_on_github/static/media/aviator.b151ba2dcfe05f76e41a.png",
+    "index.html": "/react_project_live_on_github/index.html",
+    "main.c85abbad.css.map": "/react_project_live_on_github/static/css/main.c85abbad.css.map",
+    "main.4a78185a.js.map": "/react_project_live_on_github/static/js/main.4a78185a.js.map",
+    "453.6d57a1bf.chunk.js.map": "/react_project_live_on_github/static/js/453.6d57a1bf.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.c85abbad.css",
+    "static/js/main.4a78185a.js"
+  ]
+}
